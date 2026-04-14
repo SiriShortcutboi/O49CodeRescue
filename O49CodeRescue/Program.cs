@@ -1,19 +1,28 @@
-﻿class player{
+﻿using System;
 
-public string n;
-public int h;
-public int xp;
+public class Player{
 
-public void dmg(int a){
-h=h-a;
-Console.WriteLine("player took damage");
-}
+    public string number;
+    public int healthPoints;
+    public int experiencePoints;
 
-public void addxp(int x){
-xp=xp+x;
-}
+    public static void Main()
+    {
+        
 
-public void show(){
-Console.WriteLine(n+" hp:"+h+" xp:"+xp);
-}
+    }
+
+    public void TakeDamage(int a){
+    healthPoints=healthPoints-a;
+    Console.WriteLine($"Player took{healthPoints} pts damage");
+    }
+
+    public void AddXP(int x){
+    experiencePoints=experiencePoints+x;
+    }
+
+    public void Show(){
+    Console.WriteLine(number+" hp:"+healthPoints+" xp:"+experiencePoints);
+    }
+
 }
